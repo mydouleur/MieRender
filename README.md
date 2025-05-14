@@ -1,1 +1,1 @@
-vx：douleur0130 拿私人微信加我下？
+基于silk.net的渲染器，目前用opengl进行渲染，可嵌入wpf和winform
