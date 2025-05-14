@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\MieSilk.GL\Mie.Silk.OpenGL.csproj" />
+	  <ProjectReference Include="..\MieSilk\Mie.Silk.DirectX.csproj" />
+	</ItemGroup>
+
+</Project>
