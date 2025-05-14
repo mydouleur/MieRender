@@ -1,1 +1,2 @@
 基于silk.net的渲染器，目前用opengl进行渲染，可嵌入wpf和winform
+下载vs2022后直接打开sln文件，build文件夹下有build好的完整项目
