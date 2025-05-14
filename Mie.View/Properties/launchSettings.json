@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Mie.View": {
+      "commandName": "Project",
+      "hotReloadEnabled": false
+    }
+  }
+}

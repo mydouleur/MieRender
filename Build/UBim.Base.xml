@@ -1,0 +1,4284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UBim.Base</name>
+    </assembly>
+    <members>
+        <member name="T:UBim.Base.Attributes.ParamInfoAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UBim.Base.Attributes.ParamInfoAttribute.ParamGroup">
+            <summary>
+            特性组名
+            </summary>
+        </member>
+        <member name="P:UBim.Base.Attributes.ParamInfoAttribute.PropertyName">
+            <summary>
+            特性属性名
+            </summary>
+        </member>
+        <member name="P:UBim.Base.Attributes.ParamInfoAttribute.Index">
+            <summary>
+            特性索引
+            </summary>
+        </member>
+        <member name="M:UBim.Base.Attributes.ParamInfoAttribute.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            需要传属性
+            </summary>
+            <param name="group"></param>
+            <param name="name"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UBim.Base.Attributes.ParamInfoAttribute.#ctor(System.String,System.Int32)">
+            <summary>
+            无需
+            </summary>
+            <param name="group"></param>
+            <param name="index"></param>
+        </member>
+        <member name="T:UBim.Base.Attributes.PluginParameterAttribute">
+            <summary>
+            节点参数标记
+            </summary>
+        </member>
+        <member name="M:UBim.Base.Attributes.PluginParameterAttribute.#ctor(System.String)">
+            <summary>
+            字符类型
+            </summary>
+            <param name="name"></param>
+            <param name="defaultValue"></param>
+        </member>
+        <member name="M:UBim.Base.Attributes.PluginParameterAttribute.#ctor(System.Double)">
+            <summary>
+            小数类型
+            </summary>
+            <param name="name"></param>
+            <param name="defaultValue"></param>
+        </member>
+        <member name="M:UBim.Base.Attributes.PluginParameterAttribute.#ctor(System.Int32)">
+            <summary>
+            整数类型
+            </summary>
+            <param name="name"></param>
+            <param name="defaultValue"></param>
+        </member>
+        <member name="P:UBim.Base.Attributes.PluginParameterAttribute.ParamType">
+            <summary>
+            参数类型
+            </summary>
+        </member>
+        <member name="P:UBim.Base.Attributes.PluginParameterAttribute.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Attributes.PropertyFuncExtAttribute">
+            <summary>
+            获取属性函数的特性
+            </summary>
+        </member>
+        <member name="M:UBim.Base.Attributes.PropertyFuncExtAttribute.#ctor(System.String)">
+            <summary>
+            属性特性的构造函数
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="P:UBim.Base.Attributes.PropertyFuncExtAttribute.FuncName">
+            <summary>
+            函数名称
+            </summary>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Arc">
+            <summary>
+            用弧之前问问阿阳吧,这玩意挺难懂得,这个弧是为了方便弧形轴线进行的快速实现
+            /// </summary>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Contour">
+            <summary>
+            轮廓线
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Contour.ContourPoints">
+            <summary>
+            轮廓点
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Contour.#ctor">
+            <summary>
+            实例
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Contour.#ctor(System.Collections.Generic.List{UBim.Base.BaseGeometry.ContourPoint})">
+            <summary>
+            实例
+            </summary>
+            <param name="contourPoints"></param>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Contour.Count">
+            <summary>
+            轮廓线的轮廓点数量
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Contour.Item(System.Int32)">
+            <summary>
+            调用轮廓点
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Contour.Add(UBim.Base.BaseGeometry.Point,UBim.Base.BaseObjectParam.Chamfer)">
+            <summary>
+            添加轮廓点
+            </summary>
+            <param name="point"></param>
+            <param name="chamfer"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Contour.Add(UBim.Base.BaseGeometry.ContourPoint)">
+            <summary>
+            添加轮廓点
+            </summary>
+            <param name="contourPoint"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Contour.GetEnumerator">
+            <summary>
+            获取枚举器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Contour.GetHashCode">
+            <summary>
+            哈希
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Contour.Equals(System.Object)">
+            <summary>
+            相等
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Contour.Equals(UBim.Base.BaseGeometry.Contour)">
+            <summary>
+            相等
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Contour.op_Equality(UBim.Base.BaseGeometry.Contour,UBim.Base.BaseGeometry.Contour)">
+            <summary>
+            轮廓线是否相等
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Contour.op_Inequality(UBim.Base.BaseGeometry.Contour,UBim.Base.BaseGeometry.Contour)">
+            <summary>
+            轮廓线是否不等
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.ContourPoint">
+            <summary>
+            二维轮廓点
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.ContourPoint.Chamfer">
+            <summary>
+            倒角
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.#ctor">
+            <summary>
+            实例无倒角的轮廓点(0,0)
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.#ctor(UBim.Base.BaseGeometry.Point,UBim.Base.BaseObjectParam.Chamfer)">
+            <summary>
+            实例轮廓点
+            </summary>
+            <param name="point"></param>
+            <param name="chamfer"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.#ctor(UBim.Base.BaseGeometry.Point)">
+            <summary>
+            实例无倒角的轮廓点
+            </summary>
+            <param name="point"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.#ctor(System.Double,System.Double,System.Double,UBim.Base.BaseObjectParam.Chamfer)">
+            <summary>
+            实例轮廓点
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            实例无倒角的轮廓点
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.op_Explicit(UBim.Base.BaseGeometry.ContourPoint)~UBim.Base.BaseGeometry.Vector">
+            <summary>
+            显示转换到Vector
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.op_Addition(UBim.Base.BaseGeometry.ContourPoint,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            点按照向量方向和模长位移到新点
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.op_Addition(UBim.Base.BaseGeometry.ContourPoint,UBim.Base.BaseGeometry.ContourPoint)">
+            <summary>
+            点坐标相加
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.op_Subtraction(UBim.Base.BaseGeometry.ContourPoint,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            点按照向量反方向和模长位移到新点
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.op_Subtraction(UBim.Base.BaseGeometry.ContourPoint,UBim.Base.BaseGeometry.ContourPoint)">
+            <summary>
+            a点指向b点的向量
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.op_Multiply(UBim.Base.BaseGeometry.ContourPoint,System.Double)">
+            <summary>
+            点坐标乘法
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.op_Multiply(System.Double,UBim.Base.BaseGeometry.ContourPoint)">
+            <summary>
+            点坐标乘法
+            </summary>
+            <param name="b"></param>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.op_Division(UBim.Base.BaseGeometry.ContourPoint,System.Double)">
+            <summary>
+            点坐标除法
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.ContourPoint.op_Equality(UBim.Base.BaseGeometry.ContourPoint,UBim.Base.BaseGeometry.ContourPoint)">
+            <summary>
+            两点是否相等
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.CoordinateSystem">
+            <summary>
+            一个右手坐标系,有原点和x轴y轴的方向
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.CoordinateSystem.XAxis">
+            <summary>
+            坐标系x轴
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.CoordinateSystem.YAxis">
+            <summary>
+            坐标系y轴
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.CoordinateSystem.Origin">
+            <summary>
+            坐标系原点
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.CoordinateSystem.#ctor">
+            <summary>
+            生成全局坐标系
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.CoordinateSystem.#ctor(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Vector,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            生成对应位置的坐标系
+            </summary>
+            <param name="origin">传入原点</param>
+            <param name="xAxis">传入x轴</param>
+            <param name="yAxis">传入y轴</param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.CoordinateSystem.#ctor(UBim.Base.BaseGeometry.Plane,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            根据平面和x方向生成一个坐标系
+            </summary>
+            <param name="plane"></param>
+            <param name="xAxis"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.CoordinateSystem.GetZAxis">
+            <summary>
+            获取坐标系z坐标
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.CoordinateSystem.GetTransform(UBim.Base.BaseGeometry.CoordinateSystem,UBim.Base.BaseGeometry.CoordinateSystem)">
+            <summary>
+            获取一个4x4变换矩阵可以把from坐标系下的点变换到to坐标系下的点
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Line">
+            <summary>
+            直线,表示方式是直线上任意一点和直线方向
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Line.Position">
+            <summary>
+            直线原点
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Line.Direction">
+            <summary>
+            直线方向
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Line.#ctor">
+            <summary>
+            生成一条过圆点的x轴正方向的直线
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Line.#ctor(UBim.Base.BaseGeometry.Segment)">
+            <summary>
+            根据线段生成直线
+            </summary>
+            <param name="segment"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Line.#ctor(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            生成一个过原点的直线
+            </summary>
+            <param name="origen"></param>
+            <param name="direction"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Line.#ctor(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            两点生成一条直线
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Line.Equals(System.Object)">
+            <summary>
+            检测输入的物体和直线是否值相等
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Line.GetHashCode">
+            <summary>
+            获取哈希值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Line.ToString">
+            <summary>
+            直线的字符串显式函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Line.op_Equality(UBim.Base.BaseGeometry.Line,UBim.Base.BaseGeometry.Line)">
+            <summary>
+            检测直线是不是相等
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Line.op_Inequality(UBim.Base.BaseGeometry.Line,UBim.Base.BaseGeometry.Line)">
+            <summary>
+            检测直线是不是不相等
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Line.op_Explicit(UBim.Base.BaseGeometry.Segment)~UBim.Base.BaseGeometry.Line">
+            <summary>
+            线段显式转换成直线
+            </summary>
+            <param name="segement"></param>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Matrix4x4">
+            <summary>
+            一个4x4旋转矩阵
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M11">
+            <summary>
+            矩阵第一行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M12">
+            <summary>
+            矩阵第一行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M13">
+            <summary>
+            矩阵第一行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M14">
+            <summary>
+            矩阵第一行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M21">
+            <summary>
+            矩阵第二行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M22">
+            <summary>
+            矩阵第二行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M23">
+            <summary>
+            矩阵第二行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M24">
+            <summary>
+            矩阵第二行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M31">
+            <summary>
+            矩阵第三行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M32">
+            <summary>
+            矩阵第三行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M33">
+            <summary>
+            矩阵第三行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M34">
+            <summary>
+            矩阵第三行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M41">
+            <summary>
+            矩阵第四行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M42">
+            <summary>
+            矩阵第四行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M43">
+            <summary>
+            矩阵第四行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Matrix4x4.M44">
+            <summary>
+            矩阵第四行
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            手动赋值生成一个矩阵
+            </summary>
+            <param name="m11"></param>
+            <param name="m12"></param>
+            <param name="m13"></param>
+            <param name="m14"></param>
+            <param name="m21"></param>
+            <param name="m22"></param>
+            <param name="m23"></param>
+            <param name="m24"></param>
+            <param name="m31"></param>
+            <param name="m32"></param>
+            <param name="m33"></param>
+            <param name="m34"></param>
+            <param name="m41"></param>
+            <param name="m42"></param>
+            <param name="m43"></param>
+            <param name="m44"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.Identity">
+            <summary>
+            创建一个单位矩阵<br/>
+            1, 0, 0, 0,<br/>
+            0, 1, 0, 0,<br/>
+            0, 0, 1, 0,<br/>
+            0, 0, 0, 1,<br/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.CreateTranslation(System.Double,System.Double,System.Double)">
+             <summary>
+            创建一个平移矩阵<br/>
+             0, 0, 0, x,<br/>
+             0, 0, 0, y,<br/>
+             0, 0, 0, z,<br/>
+             0, 0, 0, 1,<br/>
+             </summary>
+             <param name="x"></param>
+             <param name="y"></param>
+             <param name="z"></param>
+             <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.CreateScale(System.Double,System.Double,System.Double)">
+            <summary>
+            创建一个缩放矩阵<br/>
+            x, 0, 0, 0,<br/>
+            0, y, 0, 0,<br/>
+            0, 0, z, 0,<br/>
+            0, 0, 0, 1,<br/>
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.CreateRotation(System.Double,UBim.Base.BaseGeometry.Vector,UBim.Base.Enums.AngleTypeEnum)">
+            <summary>
+            创建一个绕轴旋转的矩阵
+            cos + cos1 * x * x,    cos1 * x * y - sin * z,  cos1 * x * z + sin * y,  0,<br/>
+            cos1* y * x + sin* z,  cos + cos1* y * y,       cos1* y * z - sin* x,    0,<br/>
+            cos1 * z* x - sin* y,  cos1 * z* y + sin* x,    cos + cos1* z * z,       0,<br/>
+            0,                     0,                       0,                       1,<br/>
+            </summary>
+            <param name="angle"></param>
+            <param name="axis"></param>
+            <param name="angleType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.Inverse">
+            <summary>
+            创建一个同时包含旋转、缩放和平移的矩阵的逆矩阵
+            </summary>
+            <returns>逆矩阵</returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.Transpose">
+            <summary>
+            矩阵转置
+            </summary>
+            <param name="value"></param>
+            <param name="result"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Addition(UBim.Base.BaseGeometry.Matrix4x4,UBim.Base.BaseGeometry.Matrix4x4)">
+            <summary>
+            矩阵相加
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Subtraction(UBim.Base.BaseGeometry.Matrix4x4,UBim.Base.BaseGeometry.Matrix4x4)">
+            <summary>
+            矩阵相减
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Multiply(UBim.Base.BaseGeometry.Matrix4x4,System.Double)">
+            <summary>
+            矩阵乘法
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Multiply(System.Double,UBim.Base.BaseGeometry.Matrix4x4)">
+            <summary>
+            矩阵乘法
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Division(UBim.Base.BaseGeometry.Matrix4x4,System.Double)">
+            <summary>
+            矩阵除法
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Division(System.Double,UBim.Base.BaseGeometry.Matrix4x4)">
+            <summary>
+            矩阵除法
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Multiply(UBim.Base.BaseGeometry.Matrix4x4,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            矩阵变换
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Multiply(UBim.Base.BaseGeometry.Matrix4x4,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            矩阵变换
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Multiply(UBim.Base.BaseGeometry.Matrix4x4,UBim.Base.BaseGeometry.Line)">
+            <summary>
+            矩阵变换
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Multiply(UBim.Base.BaseGeometry.Matrix4x4,UBim.Base.BaseGeometry.CoordinateSystem)">
+            <summary>
+            矩阵变换
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.op_Multiply(UBim.Base.BaseGeometry.Matrix4x4,UBim.Base.BaseGeometry.Matrix4x4)">
+            <summary>
+            矩阵和矩阵的乘法
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Matrix4x4.ToCoordinateSystem(UBim.Base.BaseGeometry.CoordinateSystem)">
+            <summary>
+            从全局坐标系到当前坐标系的矩阵变换,这里的变换传入当前坐标系
+            </summary>
+            <param name="coordinate"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Plane">
+            <summary>
+            一个三维平面用平面上的一点和法向量来表示
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Plane.Origin">
+            <summary>
+            平面原点
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Plane.Normal">
+            <summary>
+            平面法向量
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Plane.#ctor">
+            <summary>
+            生成坐标系平面
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Plane.#ctor(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            用原点和法向量生成平面
+            </summary>
+            <param name="origen"></param>
+            <param name="normal"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Plane.#ctor(UBim.Base.BaseGeometry.CoordinateSystem)">
+            <summary>
+            生成坐标系平面
+            </summary>
+            <param name="coordinateSystem"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Plane.#ctor(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            三点生成平面
+            </summary>
+            <param name="first"></param>
+            <param name="second"></param>
+            <param name="third"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Plane.#ctor(System.Collections.Generic.List{UBim.Base.BaseGeometry.Point})">
+            <summary>
+            点集生成平面
+            </summary>
+            <param name=""></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Plane.#ctor(System.Collections.Generic.List{UBim.Base.BaseGeometry.ContourPoint})">
+            <summary>
+            通过控制点生成平面
+            </summary>
+            <param name="points"></param>
+            <exception cref="T:UBim.Base.CustomException.LibraryException"></exception>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Plane.Parallel(UBim.Base.BaseGeometry.Plane,UBim.Base.BaseGeometry.Plane)">
+            <summary>
+            判断平面是否平行
+            </summary>
+            <param name="plane1"></param>
+            <param name="plane2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Point">
+            <summary>  
+             一个三维点
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Point.X">
+            <summary>
+            点X坐标
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Point.Y">
+            <summary>
+            点Y坐标
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Point.Z">
+            <summary>
+            点Z坐标
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.#ctor">
+            <summary>
+            一个(0,0,0)点
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            一个(x,y,z)点
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.UpdateCoordinates(System.Double,System.Double,System.Double)">
+            <summary>
+            更新点坐标,但不实例一个新点
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.UpdateCoordinates(UBim.Base.BaseGeometry.Point)">
+            <summary>
+            更新到other点坐标,但不实例一个新点
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_Explicit(UBim.Base.BaseGeometry.Point)~UBim.Base.BaseGeometry.Vector">
+            <summary>
+            显示转换到Vector
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_Addition(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            点按照向量方向和模长位移到新点
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_Addition(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            点坐标相加
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_Subtraction(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            点按照向量反方向和模长位移到新点
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_Subtraction(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            a点指向b点的向量
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_Multiply(UBim.Base.BaseGeometry.Point,System.Double)">
+            <summary>
+            点坐标乘法
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_Multiply(System.Double,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            点坐标乘法
+            </summary>
+            <param name="b"></param>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_Division(UBim.Base.BaseGeometry.Point,System.Double)">
+            <summary>
+            点坐标除法
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_Equality(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            两点是否相等
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_Inequality(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            两点是否不相等
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_GreaterThan(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            点比较
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_GreaterThanOrEqual(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            点比较
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_LessThan(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            点比较
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.op_LessThanOrEqual(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            点比较
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Point.Item(System.Int32)">
+            <summary>
+            只读索引器,根据索引调用X/Y/Z
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.Equals(System.Object)">
+            <summary>
+            点是否后传入物体值相等
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.GetHashCode">
+            <summary>
+            获取哈希值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.ToString">
+            <summary>
+            输出"{X} {Y} {Z}"
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.Copy">
+            <summary>
+            拷贝点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.Clone">
+            <summary>
+            拷贝点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.Min(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            两点求最小点
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.Max(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            两点求最大点
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.Equals(UBim.Base.BaseGeometry.Point)">
+            <summary>
+            判断点是否相等
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point.CompareTo(UBim.Base.BaseGeometry.Point)">
+            <summary>
+            点比较器,根据xyz的顺序做比较,先比较x,再比较y,最后比较z,一般当点集再同一直线上使用
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Point2">
+            <summary>
+            二维点
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Point2.X">
+            <summary>
+            点X坐标
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Point2.Y">
+            <summary>
+            点Y坐标
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point2.#ctor">
+            <summary>
+            二维原点
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point2.#ctor(System.Double,System.Double)">
+            <summary>
+            一个(x,y)点
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point2.op_Implicit(UBim.Base.BaseGeometry.Point2)~UBim.Base.BaseGeometry.Vector2">
+            <summary>
+            隐式转换至二维向量
+            </summary>
+            <param name="a"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point2.op_Subtraction(UBim.Base.BaseGeometry.Point2,UBim.Base.BaseGeometry.Point2)">
+            <summary>
+            a点指向b点的向量
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Point2.op_Addition(UBim.Base.BaseGeometry.Point2,UBim.Base.BaseGeometry.Vector2)">
+            <summary>
+            a点延b向量长度和方向的新点
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Ray">
+            <summary>
+            射线
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Ray.Origin">
+            <summary>
+            射线原点
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Ray.Direction">
+            <summary>
+            指向方向
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Ray.#ctor(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            实例一个原点在origin,指向direction的射线
+            </summary>
+            <param name="origin"></param>
+            <param name="direction"></param>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Segment">
+            <summary>
+            起终点表示的三维线段
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Segment.StartPoint">
+            <summary>
+            线段起点
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Segment.EndPoint">
+            <summary>
+            线段终点
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Segment.Direction">
+            <summary>
+            线段方向
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.#ctor">
+            <summary>
+            一个坐标原点到(1,0,0)的线段
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.#ctor(UBim.Base.BaseGeometry.Point,UBim.Base.BaseGeometry.Point)">
+            <summary>
+            一个起终点线段
+            </summary>
+            <param name="startPoint"></param>
+            <param name="endPoint"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            两点生成线段
+            </summary>
+            <param name="x1"></param>
+            <param name="y1"></param>
+            <param name="z1"></param>
+            <param name="x2"></param>
+            <param name="y2"></param>
+            <param name="z2"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.ToString">
+            <summary>
+            返回字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.AnotherPoint(UBim.Base.BaseGeometry.Point)">
+            <summary>
+            返回线段另一个点,在current既不是起点也不是中点的时候返回null
+            </summary>
+            <param name="current"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.GetMiddlePoint">
+            <summary>
+            获取线段中心点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.Equals(System.Object)">
+            <summary>
+            判断是否等于另一线段
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.op_Equality(UBim.Base.BaseGeometry.Segment,UBim.Base.BaseGeometry.Segment)">
+            <summary>
+            判断两条香断是否相等
+            </summary>
+            <param name="segment1"></param>
+            <param name="segment2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.GetHashCode">
+            <summary>
+            获取哈希值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.Extend(System.Double,System.Boolean,System.Boolean)">
+            <summary>
+            线段延伸
+            </summary>
+            <param name="length">长度</param>
+            <param name="Begin">是否延伸起点</param>
+            <param name="End">是否延伸终点</param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Segment.Equals(UBim.Base.BaseGeometry.Segment)">
+            <summary>
+            判断是否等于另一线段
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Vector">
+            <summary>
+            三维向量,一个三元数
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Vector.X">
+            <summary>
+            向量坐标
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Vector.Y">
+            <summary>
+            向量坐标
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Vector.Z">
+            <summary>
+            向量坐标
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Vector.StandardAxis">
+            <summary>
+            向量标准向量,当你需要一个向量的标准轴的时候,直接调用,会给你一个指向全局正方向的单位向量,零向量返回零向量
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.#ctor">
+            <summary>
+            零向量
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            一个(x,y,z)向量
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="z"></param>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Vector.Zero">
+            <summary>
+            一个零向量
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Vector.UnitX">
+            <summary>
+            一个(1,0,0)向量
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Vector.UnitY">
+            <summary>
+            一个(0,1,0)向量
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Vector.UnitZ">
+            <summary>
+            一个(0,0,1)向量
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.op_Explicit(UBim.Base.BaseGeometry.Vector)~UBim.Base.BaseGeometry.Point">
+            <summary>
+            显示转换成点
+            </summary>
+            <param name="v"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.op_UnaryNegation(UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            这个向量的反向量
+            </summary>
+            <param name="v"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.op_Addition(UBim.Base.BaseGeometry.Vector,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            向量相加
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.op_Subtraction(UBim.Base.BaseGeometry.Vector,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            向量相减
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.op_Multiply(UBim.Base.BaseGeometry.Vector,System.Double)">
+            <summary>
+            向量值乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.op_Multiply(System.Double,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            向量值乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.op_Multiply(UBim.Base.BaseGeometry.Vector,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            向量点乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.op_Division(UBim.Base.BaseGeometry.Vector,System.Double)">
+            <summary>
+            向量值除
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.CrossProduct(UBim.Base.BaseGeometry.Vector,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            向量叉乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.CrossProduct(UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            叉乘
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.Cross(UBim.Base.BaseGeometry.Vector,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            叉乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.Dot(UBim.Base.BaseGeometry.Vector,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            点乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.DotProduct(UBim.Base.BaseGeometry.Vector,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            点乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.Dot(UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            点乘
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.DotProduct(UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            点乘
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.GetRatio(UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            平行向量可使用此函数,不然返回的值是错的且不报错
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.op_Equality(UBim.Base.BaseGeometry.Vector,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            向量是否相等
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.op_Inequality(UBim.Base.BaseGeometry.Vector,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            向量是否不相等
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Vector.Item(System.Int32)">
+            <summary>
+            只读索引器,根据索引调用X/Y/Z
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.GetLengthSquared">
+            <summary>
+            获取模长的平方
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Vector.Magnitude">
+            <summary>
+            模长
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.Normalize(System.Double,System.Boolean,UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            将这个向量归一化
+            </summary>
+            <param name="scale"></param>
+            <param name="isZeroVectorNormalize"></param>
+            <param name="zeroDefault"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.Normalize(UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            返回一个向量的单位向量
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.Equals(System.Object)">
+            <summary>
+            向量是否和传入物体相等
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.GetHashCode">
+            <summary>
+            获取哈希值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.IsZero(System.Double)">
+            <summary>
+            判断零向量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.IsPerpendicular(UBim.Base.BaseGeometry.Vector,System.Double)">
+            <summary>
+            检测两个向量是否垂直
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.IsParallel(UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            判断两向量是否平行
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.IsSameDirection(UBim.Base.BaseGeometry.Vector)">
+            <summary>
+            判断两向量是否同一方向
+            </summary>
+            <param name="vector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.Clone">
+            <summary>
+            返回当前向量的浅拷贝
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.Copy">
+            <summary>
+            返回当前向量的浅拷贝
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector.ToString">
+            <summary>
+            覆写ToString,主要是为了Debug的时候能直接查看数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseGeometry.Vector2">
+            <summary>
+            二维向量
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Vector2.X">
+            <summary>
+            向量坐标
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseGeometry.Vector2.Y">
+            <summary>
+            向量坐标
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseGeometry.Vector2.Magnitude">
+            <summary>
+            向量模长
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.#ctor">
+            <summary>
+            零向量
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.#ctor(System.Double,System.Double)">
+            <summary>
+            (x,y)向量
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.Normalize(System.Double,System.Boolean)">
+            <summary>
+            将这个向量归一化
+            </summary>
+            <param name="scale"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.op_Implicit(UBim.Base.BaseGeometry.Vector2)~UBim.Base.BaseGeometry.Point2">
+            <summary>
+            二维向量到二维点的隐式转换
+            </summary>
+            <param name="a"></param>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.op_Subtraction(UBim.Base.BaseGeometry.Vector2,UBim.Base.BaseGeometry.Vector2)">
+            <summary>
+            向量相减
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.op_UnaryNegation(UBim.Base.BaseGeometry.Vector2)">
+            <summary>
+            返回二维反向量
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.op_Multiply(System.Double,UBim.Base.BaseGeometry.Vector2)">
+            <summary>
+            向量值乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.op_Multiply(UBim.Base.BaseGeometry.Vector2,System.Double)">
+            <summary>
+            向量值乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.op_Multiply(UBim.Base.BaseGeometry.Vector2,UBim.Base.BaseGeometry.Vector2)">
+            <summary>
+            向量点乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.CrossProduct(UBim.Base.BaseGeometry.Vector2,UBim.Base.BaseGeometry.Vector2)">
+            <summary>
+            向量叉乘
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.Rotate90CounterClockwise">
+            <summary>
+            逆时针旋转90度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.Rotate90Clockwise">
+            <summary>
+            顺时针旋转90度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseGeometry.Vector2.ToVetor(System.Double)">
+            <summary>
+            转换成三维向量,其中z值是可以自己指定的,默认归零
+            </summary>
+            <param name="z"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseObjectParam.Chamfer">
+            <summary>
+            倒角
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.Chamfer.X">
+            <summary>
+            倒角坐标
+            </summary> 
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.Chamfer.ChamferType">
+            <summary>
+            倒角类型
+            </summary> 
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.Chamfer.#ctor">
+            <summary>
+            实例倒角
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.Chamfer.#ctor(System.Double,System.Double,UBim.Base.Enums.ChamferTypeEnum)">
+            <summary>
+            实例倒角
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <param name="chamferType"></param>
+        </member>
+        <member name="T:UBim.Base.BaseObjectParam.Identifier">
+            <summary>
+            所有YGOBject都需要一个ID
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.Identifier.ID">
+            <summary>
+            ID存储在这里
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseObjectParam.Identifier.NextAvailableID">
+            <summary>
+            构造函数_创建一个空的ID
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.Identifier.#ctor(System.Int32)">
+            <summary>
+            构造函数_创建一个指定的ID
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.Identifier.Equals(System.Object)">
+             <summary>
+            比较两物体是否都为Identifier且他们ID相同 
+             </summary>
+             <param name="OtherObject"></param>
+             <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.Identifier.Equals(UBim.Base.BaseObjectParam.Identifier)">
+            <summary>
+            比较两个Identifier是否ID相同
+            </summary>
+            <param name="OtherIdentifier"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.Identifier.GetHashCode">
+            <summary>
+            获取哈希值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.Identifier.IsValid">
+            <summary>
+            检测ID是否有效,当ID为0时无效,当ID在数据库中存在时无效
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.Identifier.ToString">
+            <summary>
+            返回ID的字符串形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.Identifier.op_Implicit(UBim.Base.BaseObjectParam.Identifier)~System.Int32">
+            <summary>
+            将ID隐式转换到int
+            </summary>
+            <param name="identifier"></param>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.Identifier.op_Implicit(System.Int32)~UBim.Base.BaseObjectParam.Identifier">
+            <summary>
+            将int隐式转换到ID
+            </summary>
+            <param name="ID"></param>
+        </member>
+        <member name="T:UBim.Base.BaseObjectParam.InputObject">
+            <summary>
+            节点的输入物体
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseObjectParam.InputObject._isPointInitialized">
+            <summary>
+            是否作为点初始化
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObject.#ctor(UBim.Base.BaseGeometry.Point)">
+            <summary>
+            构造函数初始化 Point
+            </summary>
+            <param name="p"></param>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObject.#ctor(UBim.Base.BaseObjectParam.Identifier)">
+            <summary>
+            构造函数初始化 YGObject
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.InputObject.Value">
+            <summary>
+            Value 属性根据对象类型返回相应的值
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObject.Equals(System.Object)">
+            <summary>
+            实现 Equals 方法以确保对象比较是基于内容的
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObject.GetHashCode">
+            <summary>
+            确保实现 GetHashCode，用于哈希集合等场景
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseObjectParam.InputObjectCollection">
+            <summary>
+            节点输入集合
+            </summary>
+        </member>
+        <member name="F:UBim.Base.BaseObjectParam.InputObjectCollection._items">
+            <summary>
+            私有物体列表
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.InputObjectCollection.Item(System.Int32)">
+            <summary>
+            this方法,获取对应索引的物体
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+            <exception cref="T:System.IndexOutOfRangeException"></exception>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.Add(UBim.Base.BaseGeometry.Point)">
+            <summary>
+            添加点的方法
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.Add(UBim.Base.BaseObjectParam.Identifier)">
+            <summary>
+            添加ID的方法
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.AddRange(System.Collections.Generic.IEnumerable{UBim.Base.BaseGeometry.Point})">
+            <summary>
+            批量添加点的方法
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.AddRange(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            批量添加ID的方法
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.InputObjectCollection.Count">
+            <summary>
+            获取集合元素的数量
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.Remove(UBim.Base.BaseGeometry.Point)">
+            <summary>
+            移除点的方法
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.Remove(UBim.Base.BaseObjectParam.Identifier)">
+            <summary>
+            移除ID的方法
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.GetPoints">
+            <summary>
+            获取所有点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.GetIds">
+            <summary>
+            获取所有的ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.GetPoint(System.Int32)">
+            <summary>
+            获取对应索引的点
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.GetIdentifier(System.Int32)">
+            <summary>
+            获取对应索引的ID
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.IsPoint(System.Int32)">
+            <summary>
+            检查某个索引是不是点
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.GetEnumerator">
+            <summary>
+            获取迭代器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            返回迭代器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.InputObjectCollection.CopyToCoordinateSystem(UBim.Base.BaseGeometry.CoordinateSystem)">
+            <summary>
+            将所有的输入点复制到另一个坐标系下
+            </summary>
+            <param name="coor"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.BaseObjectParam.NotifyPropertyBase">
+            <summary>
+            属性通知基类
+            </summary>
+        </member>
+        <member name="E:UBim.Base.BaseObjectParam.NotifyPropertyBase.PropertyChanged">
+            <summary>
+            属性变化发布器
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.NotifyPropertyBase.OnPropertyChanged(System.String)">
+            <summary>
+            发布属性变化
+            </summary>
+            <param name="propName"></param>
+        </member>
+        <member name="T:UBim.Base.BaseObjectParam.ObservableDictionary`2">
+            <summary>
+            基于字典的可观察字典,这个字典不能用int作为key,不然会出现各种奇奇怪怪的bug,这是因为this[]的实现
+            </summary>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="E:UBim.Base.BaseObjectParam.ObservableDictionary`2.PropertyChanged">
+            <summary>
+            属性变更事件发布器
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.OnPropertyChanged(System.String)">
+            <summary>
+            发布属性变更事件
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="E:UBim.Base.BaseObjectParam.ObservableDictionary`2.CollectionChanged">
+            <summary>
+            集合变更事件发布器
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            发布集合集合变更事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.ObservableDictionary`2.Keys">
+            <summary>
+            键集合
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.ObservableDictionary`2.Values">
+            <summary>
+            值集合
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.ObservableDictionary`2.Count">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.ObservableDictionary`2.Item(`0)">
+            <summary>
+            this方法,通过this[key]获取对应的value
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UBim.Base.BaseObjectParam.ObservableDictionary`2.Item(System.Int32)">
+            <summary>
+            this方法,通过this[int]获取对应的value
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.Add(`0,`1)">
+            <summary>
+            添加方法
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.Clear">
+            <summary>
+            清空方法
+            </summary>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.Remove(`0)">
+            <summary>
+            移除方法
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.GetIndex(System.Int32)">
+            <summary>
+            获取索引对应的值
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.SetIndex(System.Int32,`1)">
+            <summary>
+            设置索引
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.GetValue(`0)">
+            <summary>
+            获取值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.SetValue(`0,`1)">
+            <summary>
+            设置值
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.FindPair(`0)">
+            <summary>
+            获取key对应的键值对
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.BaseObjectParam.ObservableDictionary`2.IndexOf(`0)">
+            <summary>
+            获取key对应的index
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.CustomException.LibraryException">
+            <summary>
+            客制化的库错误
+            </summary>
+        </member>
+        <member name="M:UBim.Base.CustomException.LibraryException.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:UBim.Base.CustomException.LibraryException.#ctor(System.String)">
+            <summary>
+            带有message的构造函数
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:UBim.Base.CustomException.LibraryException.#ctor(System.String,System.Exception)">
+            <summary>
+            带有内置错误的和message的构造函数
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="T:UBim.Base.DataInterface.IContourPlate">
+            <summary>
+            多边形板接口
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IContourPlate.VerticalDepth">
+            <summary>
+            深度位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IContourPlate.VerticalOffset">
+            <summary>
+            深度偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IContourPlate.Normal">
+            <summary>
+            多边形板法向量
+            </summary>
+        </member>
+        <member name="T:UBim.Base.DataInterface.IFit">
+            <summary>
+            对齐接口
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IFit.FitPlane">
+            <summary>
+            对齐平面
+            </summary>
+        </member>
+        <member name="T:UBim.Base.DataInterface.IPart">
+            <summary>
+            零件接口
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IPart.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IPart.Material">
+            <summary>
+            材质
+            </summary>
+        </member>
+        <member name="T:UBim.Base.DataInterface.IPolyBeam">
+            <summary>
+            折梁接口
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IPolyBeam.HorizontalDepth">
+            <summary>
+            水平位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IPolyBeam.HorizontalOffset">
+            <summary>
+            水平偏移 
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IPolyBeam.VerticalDepth">
+            <summary>
+            深度位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IPolyBeam.VerticalOffset">
+            <summary>
+            深度偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IPolyBeam.RotationalLocation">
+            <summary>
+            旋转偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IPolyBeam.RotationalOffset">
+            <summary>
+            旋转偏移
+            </summary>
+        </member>
+        <member name="T:UBim.Base.DataInterface.IRectangleGrid">
+            <summary>
+            矩形轴线
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.LabelX">
+            <summary>
+            标签X
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.LabelY">
+            <summary>
+            标签Y
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.LabelZ">
+            <summary>
+            标签Z
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.CoordinateX">
+            <summary>
+            X轴
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.CoordinateY">
+            <summary>
+            Y轴
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.CoordinateZ">
+            <summary>
+            Z轴
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.ExtensionBeginX">
+            <summary>
+            X轴起始延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.ExtensionBeginY">
+            <summary>
+            Y轴起始延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.ExtensionBeginZ">
+            <summary>
+            Z轴起始延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.ExtensionEndX">
+            <summary>
+            X轴终止延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.ExtensionEndY">
+            <summary>
+            Y轴终止延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IRectangleGrid.ExtensionEndZ">
+            <summary>
+            Z轴终止延伸
+            </summary>
+        </member>
+        <member name="T:UBim.Base.DataInterface.IWeld">
+            <summary>
+            焊接接口
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IWeld.MainID">
+            <summary>
+            主物体
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IWeld.AnotherID">
+             <summary>
+            次物体
+             </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IWeld.SiteOrWorkShop">
+            <summary>
+            工厂还是工地
+            </summary>
+        </member>
+        <member name="P:UBim.Base.DataInterface.IWeld.ConnectAssemblies">
+            <summary>
+            作为次零件还是子构件
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.AngleTypeEnum">
+            <summary>
+            角度类型,Degree是角度制,Radian是弧度制
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.AngleTypeEnum.DEGREE">
+            <SUMMARY>
+            代表角度,直角表示为90
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.AngleTypeEnum.RADIAN">
+            <SUMMARY>
+            代表弧度,直角表示为PI/2
+            </SUMMARY>
+        </member>
+        <member name="T:UBim.Base.Enums.BentPlaneEnum">
+            <summary>
+            曲梁弯曲平面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BentPlaneEnum.XY">
+            <summary>
+            在XY平面弯曲
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BentPlaneEnum.XZ">
+            <summary>
+            在XZ平面弯曲
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltDistributionEnum.STANDARD">
+            <summary>
+            阵列螺栓
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltDistributionEnum.INDENTATION_ODD">
+            <summary>
+            奇数缩进
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltDistributionEnum.INDENTATION_EVEN">
+            <summary>
+            偶数缩进
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltDistributionEnum.XYLIST">
+            <summary>
+            XY阵列
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltDistributionEnum.CIRCLE">
+            <summary>
+            圆形螺栓
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltDistributionEnum.CIRCLE_AIMCENTER">
+            <summary>
+            向心圆形螺栓
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltDistributionEnum.FAN">
+            <summary>
+            扇形/极轴螺栓
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltDistributionEnum.FAN_AIMCENTER">
+            <summary>
+            向心扇形极轴螺栓
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.BoltPartTypeEnum">
+            <summary>
+            螺栓零件类型
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltPartTypeEnum.BOLTHEAD">
+            <summary>
+            螺头
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltPartTypeEnum.NUT">
+            <summary>
+            螺母
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltPartTypeEnum.WASHER">
+            <summary>
+            垫片
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.BoltRotateSlotsEnum">
+            <summary>
+            螺栓长孔方向
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltRotateSlotsEnum.ROTATE_SLOTS_PARALLEL">
+            <summary>
+            平行
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltRotateSlotsEnum.ROTATE_SLOTS_ODD">
+            <summary>
+            奇数方向
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltRotateSlotsEnum.ROTATE_SLOTS_EVEN">
+            <summary>
+            偶数方向
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.BoltShapeEnum">
+            <summary>
+            螺栓形状
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltShapeEnum.HEXAGONALCOLUNM">
+            <summary>
+            六棱柱
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltShapeEnum.HEXAGONALPRIMOMID">
+            <summary>
+            六棱台
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltShapeEnum.DODECAGONALCOLUNM">
+            <summary>
+            十二棱柱
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.BoltShapeEnum.RECTANGLE">
+            <summary>
+            四棱柱
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.ChamferTypeEnum">
+            <summary>
+            倒角类型
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ChamferTypeEnum.NONE">
+            <summary>
+            无倒角
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ChamferTypeEnum.LINE">
+            <summary>
+            直线倒角
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ChamferTypeEnum.ROUNDING">
+            <summary>
+            外圆弧倒角
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ChamferTypeEnum.ARC">
+            <summary>
+            内圆弧倒角
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ChamferTypeEnum.ARC_POINT">
+            <summary>
+            圆倒角
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ChamferTypeEnum.SQUARE">
+            <summary>
+            平方倒角
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ChamferTypeEnum.SQUARE_PARALLEL">
+            <summary>
+            平行平方倒角
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ChamferTypeEnum.LINE_AND_ARC">
+            <summary>
+            直弧倒角
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.ColorLevelEnum">
+            <summary>
+            颜色等级
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFFF00FF">
+            <SUMMARY>
+            0
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFA19595">
+            <SUMMARY>
+            1
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF8358d8">
+            <SUMMARY>
+            2
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF1A462F">
+            <SUMMARY>
+            3
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF6F391A">
+            <SUMMARY>
+            4
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF85AC1C">
+            <SUMMARY>
+            5
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF2dc0fb">
+            <SUMMARY>
+            6
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFb96986">
+            <SUMMARY>
+            7
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF8b7d60">
+            <SUMMARY>
+            8
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF5a61b3">
+            <SUMMARY>
+            9
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF328f5e">
+            <SUMMARY>
+            10
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF9191D9">
+            <SUMMARY>
+            11
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF0037e6">
+            <SUMMARY>
+            12
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFbd7702">
+            <SUMMARY>
+            13
+            </SUMMARY>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF00d3e6">
+            <SUMMARY>
+            14
+            </SUMMARY>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFF44336" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFEA00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00E5FF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF1744" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF5E35B1" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF8BC34A" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFBA68C8" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFF176" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFF06292" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF3D5AFE" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF1976D2" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF8A65" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF7986CB" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00E676" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFB8C00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF009688" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFD500F9" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF78909C" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF03A9F4" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF76FF03" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF0097A7" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF2E7D32" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFE57373" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF8F00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF18FFFF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFC2185B" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF4081" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF7C4DFF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF66BB6A" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFA1887F" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFAFB42B" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF9C27B0" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFDD835" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF448AFF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFC6FF00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFC62828" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF4DD0E1" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFE64A19" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFCFD8DC" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFECB3" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF9575CD" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFF0F4C3" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF40C4FF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF69F0AE" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFF4511E" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFF48FB1" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF64FFDA" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF536DFE" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF0277BD" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF303F9F" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF4FC3F7" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFCDDC39" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF2962FF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF1DE9B6" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFD81B60" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF1E88E5" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF9CCC65" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFAB40" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFB2DFDB" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF6A1B9A" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00BCD4" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFC107" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFE91E63" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFCCBC" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF651FFF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00796B" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFF9A825" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF689F38" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF8D6E63" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFE040FB" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFB388FF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF43A047" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFA000" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF039BE5" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF4527A0" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF6D4C41" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00695C" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFDCEDC8" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF1B5E20" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFE65100" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFCE93D8" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF26A69A" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00ACC1" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF8A80" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF9100" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF81C784" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF7E57C2" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFE1BEE7" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFB3E5FC" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFF59D" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFB74D" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF7985CB" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00897B" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF1565C0" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFC0CA33" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFEB3B" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF4CAF50" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF3F51B5" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF2196F3" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF1A68C8" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF0288D1" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF8E24AA" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00838F" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF512DA8" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF29B6F6" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFE082" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF673AB7" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFA5D6A7" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF7CB342" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF3949AB" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF546E7A" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF8E24BA" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF82B1FF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF388E3C" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFD4E157" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF26C6DA" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFB300" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF7B1FA2" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF283593" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF4DB6AC" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFEF5350" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFBC02D" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFDCE775" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF5722" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFC5E1A5" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF9FA8DA" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFCA28" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF128FB1" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFEF9A9A" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFE6EE9C" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF607D8B" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFB39DDB" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF80CBC4" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF81D4FA" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFAB91" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFCC80" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF9800" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFD32F2F" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF9E9D24" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFEF6C00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFD84315" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFF57F17" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF4A148C" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF0D47A1" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF006064" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF6F00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFB71C1C" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF004D40" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF01579B" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF311B92" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF1A237E" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF880E4F" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF33691E" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF5252" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF827717" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFBF360C" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFEEFF41" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF0091EA" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF9E80" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00C853" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFAA00FF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00B8D4" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00B0FF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF00BFA5" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFAB00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFC51162" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFD50000" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF2979FF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFD600" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF6D00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF304FFE" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF64DD17" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFF50057" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF6200EA" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFB2FF59" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFFF00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFD740" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF84FFFF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFC400" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFEA80FC" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF6E40" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF3D00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFA7FFEB" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF8C9EFF" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFCCFF90" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFD180" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFBCAAA4" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFB9F6CA" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFF80AB" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFFF8D" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFE57F" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFDD2C00" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF90A4AE" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFB0BEC5" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF80DEEA" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FF90CAF9" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFFFD54F" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFC5CAE9" -->
+        <!-- Badly formed XML comment ignored for member "F:UBim.Base.Enums.ColorLevelEnum.FFD7CCC8" -->
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF810081">
+            <summary>
+            214
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF815681">
+            <summary>
+            215
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF680068">
+            <summary>
+            216
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF684568">
+            <summary>
+            217
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF4F004F">
+            <summary>
+            218
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF4F354F">
+            <summary>
+            219
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFBF00FF">
+            <summary>
+            220
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFEAAAFF">
+            <summary>
+            221
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF8D00BD">
+            <summary>
+            222
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFAD7EBD">
+            <summary>
+            223
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF600081">
+            <summary>
+            224
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF765681">
+            <summary>
+            225
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF4E0068">
+            <summary>
+            226
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF5F4568">
+            <summary>
+            227
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF3B004F">
+            <summary>
+            228
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF49354F">
+            <summary>
+            229
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF7F00FF">
+            <summary>
+            230
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFD4AAFF">
+            <summary>
+            231
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF5E00BD">
+            <summary>
+            232
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF9D7EBD">
+            <summary>
+            233
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF400081">
+            <summary>
+            234
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF6B5681">
+            <summary>
+            235
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF340068">
+            <summary>
+            236
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF564568">
+            <summary>
+            237
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF27004F">
+            <summary>
+            238
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF42354F">
+            <summary>
+            239
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF3F00FF">
+            <summary>
+            240
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFBFAAFF">
+            <summary>
+            241
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF2E00BD">
+            <summary>
+            242
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF8D7EBD">
+            <summary>
+            243
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF1F0081">
+            <summary>
+            244
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF605681">
+            <summary>
+            245
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF190068">
+            <summary>
+            246
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF4E4568">
+            <summary>
+            247
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF13004F">
+            <summary>
+            248
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF3B354F">
+            <summary>
+            249
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF333333">
+            <summary>
+            250
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF000000">
+            <summary>
+            251
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFFFFFFF">
+            <summary>
+            252
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FFFF0000">
+            <summary>
+            253
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF00FF00">
+            <summary>
+            254
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ColorLevelEnum.FF0000FF">
+            <summary>
+            255
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ConditionBoolEnum.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ConditionBoolEnum.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ConditionDoubleEnum.Equal">
+            <summary>
+            等于
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ConditionDoubleEnum.NotEqual">
+            <summary>
+            不等于
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ConditionDoubleEnum.Large">
+            <summary>
+            大于
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ConditionDoubleEnum.Less">
+            <summary>
+            小于
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ConditionStringEnum.Equal">
+            <summary>
+            等于
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ConditionStringEnum.NotEqual">
+            <summary>
+            不等于
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ConditionStringEnum.Contain">
+            <summary>
+            包含
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ConditionStringEnum.NotContain">
+            <summary>
+            不包含
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.HorizontalDepthEnum">
+            <summary>
+            水平位置
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.HorizontalDepthEnum.LEFT">
+            <summary>
+            左边
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.HorizontalDepthEnum.MIDDLE">
+            <summary>
+            中间
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.HorizontalDepthEnum.RIGHT">
+            <summary>
+            右边
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.ObjectTypeEnum">
+            <summary>
+            类型枚举
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.NONE">
+            <summary>
+            未知类型
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.PART">
+            <summary>
+            零件
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.BOLT">
+            <summary>
+            螺栓
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.WELD">
+            <summary>
+            焊接
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.GRID">
+            <summary>
+            轴网
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.BOOLEAN">
+            <summary>
+            布尔切割
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.FITTING">
+            <summary>
+            对齐
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.ASSEMBLY">
+            <summary>
+            构件
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.COMPONENT">
+            <summary>
+            组件
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.CONSTRUCT_POINT">
+            <summary>
+            辅助点
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.CONSTRUCT_LINE">
+            <summary>
+            辅助线
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.CONSTRUCT_PLANE">
+            <summary>
+            辅助面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.REFERENCE_OBJECT">
+            <summary>
+            参考对象
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.LOAD">
+            <summary>
+            负载
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.SURFACE_PROCESS">
+            <summary>
+            表面处理
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ObjectTypeEnum.REBAR">
+            <summary>
+            钢筋
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.PartPropertyType">
+            <summary>
+            零件属性类型,这个主要用来实现视图中的零件依靠不同的参数渲染成不同的颜色
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartPropertyType.ColorLevel">
+            <summary>
+            颜色等级
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartPropertyType.Material">
+            <summary>
+            材质
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartPropertyType.ProfileName">
+            <summary>
+            界面名称
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartPropertyType.ProfileType">
+            <summary>
+            界面类型
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartPropertyType.Phase">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartPropertyType.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartPropertyType.PartPrefix">
+            <summary>
+            零件前缀
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartPropertyType.AssemblyPrefix">
+            <summary>
+            构件前缀
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartPropertyType.MainPartOrSubPart">
+            <summary>
+            主零件或者次零件
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.PartTypeEnum">
+            <summary>
+            零件类型
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartTypeEnum.BEAM">
+            <summary>
+            梁
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartTypeEnum.CONTOURPLATE">
+            <summary>
+            板
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PartTypeEnum.POLYBEAM">
+            <summary>
+            折梁
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.PluginStateEnum">
+            <summary>
+            节点状态
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PluginStateEnum.FINISHED">
+            <summary>
+            正确完成
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PluginStateEnum.INPUTERROR">
+            <summary>
+            中断错误
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PluginStateEnum.PARAMETERSERROR">
+            <summary>
+            参数错误
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.PluginStateEnum.UNKNOWN">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.ProfileTypeEnum">
+            <summary>
+            全部的截面类型
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.ALL_PROFILES">
+            <summary>
+            所有截面类型
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_UNKNOWN">
+            <summary>
+            未知截面类型
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_I">
+            <summary>
+            I型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_L">
+            <summary>
+            L型角钢截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_Z">
+            <summary>
+            Z型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_U">
+            <summary>
+            U型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_PL">
+            <summary>
+            板型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_D">
+            <summary>
+            圆钢截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_PD">
+            <summary>
+            O型圆管截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_P">
+            <summary>
+            口型矩形管截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_C">
+            <summary>
+            C型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_T">
+            <summary>
+            T型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_HK">
+            <summary>
+            焊接箱型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_HQ">
+            <summary>
+            HQ型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_ZZ">
+            <summary>
+            ZZ型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_CC">
+            <summary>
+            CC型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_CW">
+            <summary>
+            CW型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_CU">
+            <summary>
+            CU型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_EB">
+            <summary>
+            EB型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_BF">
+            <summary>
+            BF型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_SPD">
+            <summary>
+            SPD型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_EC">
+            <summary>
+            EC型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_ED">
+            <summary>
+            ED型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_EE">
+            <summary>
+            EE型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_EF">
+            <summary>
+            EF型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_EZ">
+            <summary>
+            EZ型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_EW">
+            <summary>
+            EW型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_POLYGON_PLATE">
+            <summary>
+            多边形板型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_FPL">
+            <summary>
+            L型角钢截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_SP">
+            <summary>
+            SP型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_RCDL">
+            <summary>
+            RCDL型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_RCXX">
+            <summary>
+            RCXX型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_RCL">
+            <summary>
+            RCL型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_RCDX">
+            <summary>
+            RCDX型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_RCX">
+            <summary>
+            RCX型截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_USER_DEFINED">
+            <summary>
+            用户定义的固定截面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.ProfileTypeEnum.YG_PROFILE_TYPE_USER_PARAMETRIC">
+            <summary>
+            用户定义的参数化截面
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.RotationalLocationEnum">
+            <summary>
+            旋转位置
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.RotationalLocationEnum.LEFT">
+            <summary>
+            后面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.RotationalLocationEnum.UP">
+            <summary>
+            顶面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.RotationalLocationEnum.RIGHT">
+            <summary>
+            前面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.RotationalLocationEnum.DOWN">
+            <summary>
+            底面
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.SelectEnum">
+            <summary>
+            选择方式
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SelectEnum.CONTAIN">
+            <summary>
+            包含
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SelectEnum.INTERSECT">
+            <summary>
+            相交
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.SingleGridAxisEnum">
+            <summary>
+            单根轴线类型
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SingleGridAxisEnum.UNKNONW">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SingleGridAxisEnum.XAXIS">
+            <summary>
+            X轴线
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SingleGridAxisEnum.YAXIS">
+            <summary>
+            Y轴线
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SingleGridAxisEnum.ZAXIS">
+            <summary>
+            Z轴线
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SingleGridAxisEnum.ANGLE">
+            <summary>
+            角度轴线
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SingleGridAxisEnum.RADIUS">
+            <summary>
+            半径轴线
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SingleGridAxisEnum.ELEVATION">
+            <summary>
+            标高轴线
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.SolidTypeEnum">
+            <summary>
+            API调用返回的固体类型
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SolidTypeEnum.NO_BOOLEAN">
+            <summary>
+            无任何切割
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SolidTypeEnum.ONLY_FIT">
+            <summary>
+            只有对齐
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.SolidTypeEnum.CURRENT">
+            <summary>
+            实际固体
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.VerticalDepthEnum">
+            <summary>
+            垂直位置
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.VerticalDepthEnum.DOWN">
+            <summary>
+            后面
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.VerticalDepthEnum.MIDDLE">
+            <summary>
+            中间
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.VerticalDepthEnum.UP">
+            <summary>
+            前面
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.WeldMapEnum">
+            <summary>
+            焊缝算法不同的对接形式
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.WeldMapEnum.LAP_JOINT">
+            <summary>
+            搭接
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.WeldMapEnum.BUTT_JOINT">
+            <summary>
+            对接
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.WeldMapEnum.T_JOINT">
+            <summary>
+            T接
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Enums.WorkshopOrSiteTypeEnum">
+            <summary>
+            螺栓属于车间焊接还是工地焊接
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.WorkshopOrSiteTypeEnum.SITE">
+            <summary>
+            工地
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Enums.WorkshopOrSiteTypeEnum.WORKSHOP">
+            <summary>
+            车间
+            </summary>
+        </member>
+        <member name="T:UBim.Base.Plugins.PluginBase">
+            <summary>
+            基本节点
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Plugins.PluginBase.InputCollection">
+            <summary>
+            节点的输入参数,包含点集的物体ID
+            </summary>
+        </member>
+        <member name="F:UBim.Base.Plugins.PluginBase.PluginCoordinateSystem">
+            <summary>
+            节点坐标系
+            
+            </summary>
+        </member>
+        <member name="P:UBim.Base.Plugins.PluginBase.Data">
+            <summary>
+            节点参数
+            </summary>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBase.SetParams(UBim.Base.BaseObjectParam.ComponentParams)">
+            <summary>
+            设置参数
+            </summary>
+            <param name="componentParams"></param>
+        </member>
+        <member name="P:UBim.Base.Plugins.PluginBase.RecordCommand">
+            <summary>
+            记录命令
+            </summary>
+        </member>
+        <member name="P:UBim.Base.Plugins.PluginBase.SaveCommand">
+            <summary>
+            存储命令
+            </summary>
+        </member>
+        <member name="P:UBim.Base.Plugins.PluginBase.ModifyCommand">
+            <summary>
+            修改命令
+            </summary>
+        </member>
+        <member name="P:UBim.Base.Plugins.PluginBase.CheckAllCommand">
+            <summary>
+            全部检查命令
+            </summary>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBase.DoModify(UBim.Base.BaseObjectParam.ComponentParams@,UBim.Base.BaseObjectParam.InputObjectCollection,UBim.Base.BaseGeometry.CoordinateSystem@)">
+            <summary>
+            运行修改
+            </summary>
+            <param name="pluginParams"></param>
+            <param name="input"></param>
+            <param name="coordinate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBase.DoCreate(UBim.Base.BaseObjectParam.ComponentParams@,UBim.Base.BaseObjectParam.InputObjectCollection@,UBim.Base.BaseGeometry.CoordinateSystem@)">
+            <summary>
+            运行创建
+            </summary>
+            <param name="pluginParams"></param>
+            <param name="input"></param>
+            <param name="coordinate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBase.SetInput">
+            <summary>
+            设置节点入参
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBase.SetCoordinateSystem(UBim.Base.BaseObjectParam.InputObjectCollection)">
+            <summary>
+            设置坐标系
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBase.InnerExecute(UBim.Base.BaseObjectParam.InputObjectCollection)">
+            <summary>
+            节点运行主函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBase.InternalSetParameters(UBim.Base.BaseObjectParam.ComponentParams@)">
+            <summary>
+            获取当前类型中的数据，根据传入的data修改后返回最终的数据储存实例
+            </summary>
+            <param name="pluginParams"></param>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBase.CheckAndSetProperty(System.String,System.Object)">
+            <summary>
+            检查是否存在属性并设置
+            </summary>
+            <param name="propertyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:UBim.Base.Plugins.PluginBaseView">
+            <summary>
+            节点窗口基类
+            </summary>
+        </member>
+        <member name="P:UBim.Base.Plugins.PluginBaseView.PluginName">
+            <summary>
+            节点名称
+            </summary>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBaseView.SetDataContext(UBim.Base.Plugins.PluginBase)">
+            <summary>
+            设置节点的数据上下文
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:UBim.Base.Plugins.PluginBaseView.ParamsFilter">
+            <summary>
+            参数的过滤字典
+            </summary>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBaseView.SetFilters(UBim.Base.BaseObjectParam.ComponentParams)">
+            <summary>
+            设置属性过滤
+            </summary>
+            <param name="componetParams"></param>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginBaseView.HasValidationError(System.Windows.DependencyObject)">
+            <summary>
+            检查是否存在验证不通过
+            </summary>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UBim.Base.Plugins.PluginExtensions">
+            <summary>
+            节点额外方法
+            </summary>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginExtensions.FindLogicalChildren``1(System.Windows.DependencyObject)">
+            <summary>
+            获取逻辑子节点
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UBim.Base.Plugins.PluginExtensions.FindVisualChildren``1(System.Windows.DependencyObject)">
+            <summary>
+            获取虚拟化的子节点
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UBim.Base.PropertyInterface.IAssemblyLinkerProperty.SiteOrWorkShop">
+            <summary>
+            车间螺栓还是工地螺栓
+            </summary> 
+        </member>
+        <member name="P:UBim.Base.PropertyInterface.IAssemblyLinkerProperty.ConnectAssemblies">
+            <summary>
+            作为零件还是构件
+            </summary> 
+        </member>
+        <member name="T:UBim.Base.PropertyInterface.IPositionObject">
+            <summary>
+            具有全部位置的物体
+            </summary>
+        </member>
+        <member name="P:UBim.Base.PropertyInterface.IPositionObject.RotationalLocation">
+            <summary>
+            旋转位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.PropertyInterface.IPositionObject.RotationalOffset">
+            <summary>
+            旋转偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.PropertyInterface.IPositionObject.VerticalDepth">
+            <summary>
+            垂直位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.PropertyInterface.IPositionObject.VerticalOffset">
+            <summary>
+            垂直偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.PropertyInterface.IPositionObject.HorizontalDepth">
+            <summary>
+            水平位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.PropertyInterface.IPositionObject.HorizontalOffset">
+            <summary>
+            水平偏移
+            </summary>
+        </member>
+        <member name="T:UBim.Base.PropertyInterface.IPartSubObjects">
+             <summary>
+            零件子物体接口
+             </summary>
+        </member>
+        <member name="M:UBim.Base.PropertyInterface.IPartSubObjects.AddRelative">
+            <summary>
+            添加于父物体的相关性
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UArcGrid">
+            <summary>
+            弧形轴线,用于创造符合一个IArcGrid的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.Radius">
+            <summary>
+            半径
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.Angle">
+            <summary>
+            角度
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.Elevation">
+            <summary>
+            标高
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.RadiusLabel">
+            <summary>
+            半径标签
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.AngleLabel">
+            <summary>
+            角度标签
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.ElevationLabel">
+            <summary>
+            标高的标签
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.RadiusExtendBegin">
+            <summary>
+            半径延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.AngleExtendBegin">
+            <summary>
+            角度延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.ElevationExtendBegin">
+            <summary>
+            标高延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.RadiusExtendEnd">
+            <summary>
+             半径终点延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.AngleExtendEnd">
+            <summary>
+            角度终点延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UArcGrid.ElevationExtendEnd">
+            <summary>
+             标高终点延伸
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UAuxiliaryBaseLine">
+            <summary>
+            辅助线基本线,用于创造一个符合IAuxiliaryBaseLine的实例
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UAuxiliaryCircle">
+            <summary>
+            辅助圆,用于创造一个符合IAuxiliaryCircle的实例
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UAuxiliaryLine">
+            <summary>
+            辅助线,用于创造一个符合IAuxiliaryLine的实例
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UAuxiliaryPoint">
+            <summary>
+            辅助点,用于创造一个符合IAuxiliaryPoint的实例
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UBaseObject">
+            <summary>
+            基本物体,用于创造一个符合IBaseObject的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBaseObject.Contour">
+            <summary>
+            轮廓点
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBaseObject.Parent">
+            <summary>
+            父级
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBaseObject.Children">
+            <summary>
+            子级
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UBeam">
+            <summary>
+            梁,用于创造一个符合IBeam的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.StartPoint">
+            <summary>
+            起点
+            </summary>       
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.EndPoint">
+            <summary>
+            终点
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.HorizontalDepth">
+            <summary>
+            水平位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.HorizontalOffset">
+            <summary>
+            水平偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.VerticalDepth">
+            <summary>
+            垂直位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.VerticalOffset">
+            <summary>
+            垂直偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.RotationalLocation">
+            <summary>
+            旋转位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.RotationalOffset">
+            <summary>
+            旋转偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.StartPointExtend">
+            <summary>
+            起点延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.StartPointHorizontalOffset">
+            <summary>
+            起点水平偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.StartPointVerticalOffset">
+            <summary>
+            起点垂直偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.EndPointExtend">
+            <summary>
+            终点延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.EndPointHorizontalOffset">
+            <summary>
+            终点水平偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.EndPointVerticalOffset">
+            <summary>
+            终点垂直偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.StartProfileDistort">
+            <summary>
+            起点截面扭曲
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.EndProfileDistort">
+            <summary>
+            终点截面扭曲
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.BentPlate">
+            <summary>
+            起拱平面
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.BentRadius">
+            <summary>
+            起拱半径
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.BentCount">
+            <summary>
+            起拱段数
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBeam.ProfileName">
+            <summary>
+            零件截面
+            </summary>  
+        </member>
+        <member name="T:UBim.Base.UModel.UBoltArray">
+            <summary>
+            螺栓阵列,用于创造一个符合IBoltArray的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltArray.BoltXDistance">
+            <summary>
+            x间距,默认为"50"
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltArray.BoltYDistance">
+            <summary>
+            y间距,默认为"50"
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltArray.RemoveBolts">
+            <summary>
+            排除螺栓,默认不排除
+            </summary>  
+        </member>
+        <member name="T:UBim.Base.UModel.UBoltGroup">
+            <summary>
+            螺栓组,用于创造一个符合IBoltGroup的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.BoltOrHole">
+            <summary>
+            螺栓还是洞
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.StartPoint">
+            <summary>
+            起点
+            </summary>       
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.EndPoint">
+            <summary>
+            终点
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Positions">
+            <summary>
+            螺栓点位
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.PartToBoltTo">
+            <summary>
+            主零件
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.PartToBeBolted">
+            <summary>
+            次零件
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.OthersToBeBolted">
+            <summary>
+            其他栓接零件
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.BoltStandard">
+            <summary>
+            螺栓标准
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.BoltSize">
+            <summary>
+            螺栓尺寸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.SiteOrWorkShop">
+            <summary>
+            车间螺栓还是工地螺栓
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.ConnectAssemblies">
+            <summary>
+            作为零件还是构件
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.IsBoltThreadInMaterial">
+            <summary>
+            切面螺纹
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.CutLength">
+            <summary>
+            切割长度
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.ExtraLength">
+            <summary>
+            附加长度
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.HoleTolerance">
+            <summary>
+            孔洞容许误差
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.OversizedOrSlot">
+            <summary>
+            长孔还是扩大孔
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.HoleSizeX">
+            <summary>
+            x方向尺寸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.HoleSizeY">
+            <summary>
+            y方向尺寸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.RotateSlots">
+            <summary>
+            孔的旋转旋转方向:平行,奇数,偶数
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.TotalHorizontalOffset">
+            <summary>
+            水平偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.TotalVerticalOffset">
+            <summary>
+            垂直偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.DxStart">
+            <summary>
+            起点偏移x
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.DxEnd">
+            <summary>
+            终点偏移x
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.DyStart">
+            <summary>
+            起点偏移y
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.DyEnd">
+            <summary>
+            终点偏移y
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.DzStart">
+            <summary>
+            起点偏移z
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.DzEnd">
+            <summary>
+            终点偏移z
+            </summary>
+        </member>
+        <member name="F:UBim.Base.UModel.UBoltGroup.Hole">
+            <summary>
+            洞s
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Hole0">
+            <summary>
+            特殊孔1
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Hole1">
+            <summary>
+            特殊孔2
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Hole2">
+            <summary>
+            特殊孔3
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Hole3">
+            <summary>
+            特殊孔4
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Hole4">
+            <summary>
+            特殊孔5
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Nut1">
+            <summary>
+            螺母1
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Nut2">
+            <summary>
+            螺母2
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Washer1">
+            <summary>
+            上方垫片1
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Washer2">
+            <summary>
+            下方垫片2
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Washer3">
+            <summary>
+            下方垫片3
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UBoltGroup.Normal">
+            <summary>
+            螺栓指向
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UBooleanPart">
+            <summary>
+            切割零件,用于创造一个符合IBooleanPart的实例
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UBooleanPlane">
+             <summary>
+            线切割,用于创造一个符合IBooleanPlane的实例
+             </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UColumn">
+            <summary>
+            柱,用于创造一个符合IColumn的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UColumn.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UColumn.HorizontalDepth">
+            <summary>
+            水平位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UColumn.HorizontalOffset">
+            <summary>
+            水平偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UColumn.VerticalDepth">
+            <summary>
+            垂直位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UColumn.VerticalOffset">
+            <summary>
+            垂直偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UColumn.RotationalLocation">
+            <summary>
+            旋转位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UColumn.RotationalOffset">
+            <summary>
+            旋转偏移
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UComponent">
+            <summary>
+            组件符号,用于创建一个符合IComponent的实例
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UContourPlate">
+            <summary>
+            多边形板,用于创造一个符合IContourPlate的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UContourPlate.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UContourPlate.VerticalDepth">
+            <summary>
+            垂直位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UContourPlate.VerticalOffset">
+            <summary>
+            垂直偏移
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UFit">
+            <summary>
+            对齐,用于创造一个符合IFit的实例
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UGrid">
+            <summary>
+            轴线,用于创造符合IGrid的实例
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UPart">
+            <summary>
+            零件,用于创造一个符合IPart的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPart.Name">
+            <summary>
+            零件名称
+            </summary> 
+        </member>
+        <member name="P:UBim.Base.UModel.UPart.Material">
+            <summary>
+            零件材料
+            </summary>  
+            
+        </member>
+        <member name="P:UBim.Base.UModel.UPart.Finish">
+            <summary>
+            零件抛光
+            </summary>  
+        </member>
+        <member name="P:UBim.Base.UModel.UPart.ColorLevel">
+            <summary>
+            零件颜色等级
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPart.AssemblyNumberPrefix">
+            <summary>
+            构件编号
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPart.PartNumberPrefix">
+            <summary>
+             零件编号
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UPolyBeam">
+            <summary>
+            折梁,勇于创造符合IPolyBeam的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPolyBeam.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPolyBeam.HorizontalDepth">
+            <summary>
+            水平位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPolyBeam.HorizontalOffset">
+            <summary>
+            水平偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPolyBeam.VerticalDepth">
+            <summary>
+            垂直位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPolyBeam.VerticalOffset">
+            <summary>
+            垂直偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPolyBeam.RotationalLocation">
+            <summary>
+            旋转位置
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPolyBeam.RotationalOffset">
+            <summary>
+            旋转偏移
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UPolyBeam.ProfileName">
+            <summary>
+            零件截面
+            </summary>  
+        </member>
+        <member name="T:UBim.Base.UModel.URectangleGrid">
+            <summary>
+            矩形轴线,用于创造符合IRectangleGrid的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.LabelX">
+            <summary>
+            x标签
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.LabelY">
+            <summary>
+            y标签
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.LabelZ">
+            <summary>
+            z标签
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.CoordinateX">
+            <summary>
+            x坐标
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.CoordinateY">
+            <summary>
+            y坐标
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.CoordinateZ">
+            <summary>
+            z坐标
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.ExtensionBeginX">
+            <summary>
+            x起点延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.ExtensionBeginY">
+            <summary>
+            y起点延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.ExtensionBeginZ">
+            <summary>
+            z起点延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.ExtensionEndX">
+            <summary>
+            x终点延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.ExtensionEndY">
+            <summary>
+            y终点延伸
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.URectangleGrid.ExtensionEndZ">
+            <summary>
+            z终点延伸
+            </summary>
+        </member>
+        <member name="T:UBim.Base.UModel.UWeld">
+            <summary>
+            焊接,用于创造符合IWeld的实例
+            </summary>
+        </member>
+        <member name="P:UBim.Base.UModel.UWeld.MainID">
+            <summary>
+            主物体
+            </summary> 
+        </member>
+        <member name="P:UBim.Base.UModel.UWeld.AnotherID">
+             <summary>
+            次物体
+             </summary> 
+        </member>
+        <member name="P:UBim.Base.UModel.UWeld.SiteOrWorkShop">
+            <summary>
+            车间还是工地
+            </summary> 
+        </member>
+        <member name="P:UBim.Base.UModel.UWeld.ConnectAssemblies">
+            <summary>
+            作为零件还是构件 false是零件,true是构件
+            </summary> 
+        </member>
+    </members>
+</doc>
