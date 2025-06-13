@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "WPFTest": {
-      "commandName": "Project",
-      "hotReloadEnabled": true
-    }
-  }
-}
